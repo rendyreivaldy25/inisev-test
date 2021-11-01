@@ -1,8 +1,25 @@
 <html>
     <head>
-
+        
     </head>
     <body>
-        Hello There !
+        <p id="story">
+            Empty Story
+        </p>
     </body>
+    <script>
+        
+        setInterval(function () { 
+            loadStory(); 
+        }, 1000);
+        function loadStory() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("story").innerHTML =
+                this.responseText;
+            }
+            xhttp.open("GET", "api/getstory.php");
+            xhttp.send();
+        }
+    </script>
 </html>
