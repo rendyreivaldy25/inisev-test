@@ -19,7 +19,7 @@
     $contentRepo = new ContentRepository($connection);
     $contentService = new ContentService($contentRepo);
 
-    if($_POST['save']){
+    if(isset($_POST['save'])){
         $loginCheck = $contentService->saveContent($_POST);
     }
     $savedStory = $contentService->getContent();

@@ -6,7 +6,7 @@
     require_once 'configs.php';
 
     $errorMessage = "";
-    if($_POST['login']){
+    if(isset($_POST['login'])){
         $connection = new Connection(
             $CONFIGS['DB_HOST'], 
             $CONFIGS['DB_USERNAME'],
