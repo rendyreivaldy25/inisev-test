@@ -19,6 +19,8 @@
     $contentRepo = new ContentRepository($connection);
     $contentService = new ContentService($contentRepo);
     $savedStory = $contentService->getContent();
+    $result = "";
     if(count($savedStory) > 0) {
-        $savedStory[0]['content'];
+        $result = $savedStory[0]['content'];
     }
+    echo $result;
