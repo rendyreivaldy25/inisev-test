@@ -23,6 +23,7 @@
         $loginCheck = $contentService->saveContent($_POST);
     }
     $savedStory = $contentService->getContent();
+    $story = "";
     if(count($savedStory) > 0) {
         $story = $savedStory[0]['content'];
     }
